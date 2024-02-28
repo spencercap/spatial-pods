@@ -8,9 +8,30 @@
 import SwiftUI
 import CoreMotion
 
+// osc
+import SwiftOSC
+
+// client
+//var client  = OSCClient(address: "10.17.31.188", port: 8080)
+var client  = OSCClient(address: "127.0.0.1", port: 11474)
+//var client  = OSCClient(address: "localhost", port: 11474)
+//var client  = OSCClient(address: "localhost", port: 8084)
+
+// server
+//var server = OSCServer(address: "", port: 8080)
+var address = OSCAddressPattern("/")
+var message = OSCMessage(
+    OSCAddressPattern("/"),
+    100,
+    5.0,
+    "Hello World"
+)
+
+
 struct ContentView: View {
     private let motionManager = MotionManager()
 //    private var label: UILabel!
+
 
     
     
@@ -32,6 +53,10 @@ struct ContentView: View {
         let rotationRate = deviceMotion.rotationRate
         let gravity = deviceMotion.gravity
         let userAcceleration = deviceMotion.userAcceleration
+        
+        
+        print("client")
+        print(client)
 
 //        let labelText = Text("""
 //        Attitude: (pitch: \(attitude.pitch), roll: \(attitude.roll), yaw: \(attitude.yaw))
@@ -46,6 +71,18 @@ struct ContentView: View {
         
         print(attitude.pitch)
         
+        
+        // osc msg test
+        let msg01 = OSCMessage(
+            OSCAddressPattern("/spacepods/"),
+            "attitude.pitch",
+            attitude.pitch
+        )
+        client.send(msg01)
+//        client.send(message)
+        
+        
+        // ui update
         self.msg = """
         Attitude: (pitch: \(attitude.pitch), roll: \(attitude.roll), yaw: \(attitude.yaw))
         Rotation Rate: (x: \(rotationRate.x), y: \(rotationRate.y), z: \(rotationRate.z))
