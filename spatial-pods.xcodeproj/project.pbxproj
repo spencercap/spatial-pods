@@ -11,6 +11,10 @@
 		0911D4EC2B7DC36A00B59007 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911D4EB2B7DC36A00B59007 /* ContentView.swift */; };
 		0911D4EE2B7DC36B00B59007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0911D4ED2B7DC36B00B59007 /* Assets.xcassets */; };
 		0911D4F12B7DC36B00B59007 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0911D4F02B7DC36B00B59007 /* Preview Assets.xcassets */; };
+		0911D4F92B7DC3CA00B59007 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911D4F82B7DC3CA00B59007 /* MotionManager.swift */; };
+		0911D4FC2B7DC41300B59007 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0911D4FB2B7DC41300B59007 /* CoreMotion.framework */; };
+		09362FB82B7E25EB00C67337 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09362FB72B7E25EB00C67337 /* SwiftUI.framework */; };
+		09362FBA2B7E2F5900C67337 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09362FB92B7E2EF700C67337 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		0911D4ED2B7DC36B00B59007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0911D4F02B7DC36B00B59007 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0911D4F22B7DC36B00B59007 /* spatial_pods.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = spatial_pods.entitlements; sourceTree = "<group>"; };
+		0911D4F82B7DC3CA00B59007 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		0911D4FB2B7DC41300B59007 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		09362FB72B7E25EB00C67337 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		09362FB92B7E2EF700C67337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09362FB82B7E25EB00C67337 /* SwiftUI.framework in Frameworks */,
+				0911D4FC2B7DC41300B59007 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,7 @@
 			children = (
 				0911D4E82B7DC36A00B59007 /* spatial-pods */,
 				0911D4E72B7DC36A00B59007 /* Products */,
+				0911D4FA2B7DC41300B59007 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +63,10 @@
 		0911D4E82B7DC36A00B59007 /* spatial-pods */ = {
 			isa = PBXGroup;
 			children = (
+				09362FB92B7E2EF700C67337 /* Info.plist */,
 				0911D4E92B7DC36A00B59007 /* spatial_podsApp.swift */,
 				0911D4EB2B7DC36A00B59007 /* ContentView.swift */,
+				0911D4F82B7DC3CA00B59007 /* MotionManager.swift */,
 				0911D4ED2B7DC36B00B59007 /* Assets.xcassets */,
 				0911D4F22B7DC36B00B59007 /* spatial_pods.entitlements */,
 				0911D4EF2B7DC36B00B59007 /* Preview Content */,
@@ -67,6 +80,15 @@
 				0911D4F02B7DC36B00B59007 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0911D4FA2B7DC41300B59007 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09362FB72B7E25EB00C67337 /* SwiftUI.framework */,
+				0911D4FB2B7DC41300B59007 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +151,7 @@
 			files = (
 				0911D4F12B7DC36B00B59007 /* Preview Assets.xcassets in Resources */,
 				0911D4EE2B7DC36B00B59007 /* Assets.xcassets in Resources */,
+				09362FBA2B7E2F5900C67337 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0911D4EC2B7DC36A00B59007 /* ContentView.swift in Sources */,
+				0911D4F92B7DC3CA00B59007 /* MotionManager.swift in Sources */,
 				0911D4EA2B7DC36A00B59007 /* spatial_podsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,7 +224,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +281,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -277,12 +301,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"spatial-pods/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "spatial-pods/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "dooo it";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.spac3.spatial-pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -302,12 +330,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"spatial-pods/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "spatial-pods/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "dooo it";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.spac3.spatial-pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
